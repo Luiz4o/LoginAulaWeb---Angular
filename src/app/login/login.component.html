@@ -1,0 +1,18 @@
+<section class="w-100 p-4 d-flex justify-content-center pb-4">
+    <form style="width: 22rem;">
+      <div data-mdb-input-init="" class="form-outline mb-4" data-mdb-input-initialized="true">
+        <input [(ngModel)]="email" name="email" type="email" id="email" class="form-control">
+        <label class="form-label" for="form2Example1" style="margin-left: 0px;">Email address</label>
+    </div>
+
+      <div data-mdb-input-init="" class="form-outline mb-4" data-mdb-input-initialized="true">
+        <input [(ngModel)]="password" name="password" type="password" id="password" class="form-control">
+        <label class="form-label" for="form2Example2" style="margin-left: 0px;">Password</label>
+    </div>
+
+    <div *ngIf="error; then thenBlock"></div>
+    <ng-template #thenBlock>Por favor, verifique o email e senha informados!</ng-template>
+
+      <button type="button" (click)="onSubmit()" data-mdb-button-init="" data-mdb-ripple-init="" class="btn btn-primary btn-block mb-4" data-mdb-button-initialized="true">Sign in</button>
+    </form>
+  </section>
